@@ -26,7 +26,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="12snake.cpp">
+    <ClCompile Include="02camC.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
