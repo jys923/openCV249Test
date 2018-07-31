@@ -5,7 +5,7 @@
 
 
 /* @ function main */
-int cvCaptureFromCAMTest()
+int main(int argc, char** argv)
 {
 	IplImage* image = 0;
 

@@ -4,7 +4,7 @@
 #include "stdafx.h"
 
 
-int imreadTest(String filePath)
+int imreadTest(String filePath);
 {
 	Mat img = imread("../images/lena.png", IMREAD_ANYCOLOR);
 	namedWindow("test", WINDOW_AUTOSIZE);

@@ -6,7 +6,7 @@ int histogram03(String filePath)
 {
 	Mat inputImg;
 
-	inputImg = imread(filePath, CV_LOAD_IMAGE_COLOR);
+	inputImg = imread("../images/lena.png", CV_LOAD_IMAGE_COLOR);
 	resize(inputImg, inputImg, Size(), SCALE, SCALE, CV_INTER_AREA);
 
 	MatND histogramB, histogramG, histogramR;

@@ -1,4 +1,6 @@
-﻿#include "stdafx.h"
+﻿#include <math.h>
+#include <stdio.h>
+#include "stdafx.h"
 
 typedef struct parameter Parameter;
 struct parameter {
@@ -7,7 +9,7 @@ struct parameter {
 	float gamma;
 };
 
-int cvSnakeImageTest()//(String filePath)
+int main()
 {
 	int i, j = 0, c;
 	IplImage *src_img, *dst_img;

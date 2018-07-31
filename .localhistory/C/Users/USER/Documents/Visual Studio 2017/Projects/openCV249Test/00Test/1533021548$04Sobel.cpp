@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-int sobel(String filePath)
+int main( int argc, char** argv )
 {
   cv::Mat src, src_gray;
   cv::Mat grad;
@@ -9,7 +9,7 @@ int sobel(String filePath)
   int ddepth = CV_16S;
  
   /// Load an image
-  src = cv::imread(filePath/*"../images/sobel.png"*/, 1 );
+  src = cv::imread( "../images/sobel.png", 1 );
  
   /// Create window & show it
   cv::namedWindow( "Image Original", CV_WINDOW_AUTOSIZE );

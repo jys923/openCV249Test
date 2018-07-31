@@ -6,10 +6,10 @@ int max_thresh = 255;
 const char* source_window = "Source image";
 const char* corners_window = "Corners detected";
 void cornerHarris_demo( int, void* );
-
+ 
  
 /* @ function main */
-int cornerHarrisTest(String filePath)
+int cornerHarrisTest(String filePath);
 {
   src = cv::imread( filePath , 1 );
    

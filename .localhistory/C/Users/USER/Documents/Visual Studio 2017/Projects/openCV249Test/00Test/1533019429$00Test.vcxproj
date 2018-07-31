@@ -163,15 +163,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="00main.cpp" />
-    <ClCompile Include="01img.cpp" />
-    <ClCompile Include="02camC.cpp" />
-    <ClCompile Include="02camC2.cpp" />
-    <ClCompile Include="03camCpp.cpp" />
-    <ClCompile Include="04Sobel.cpp" />
-    <ClCompile Include="05ConerDetHarris.cpp" />
-    <ClCompile Include="09Histogram03.cpp" />
-    <ClCompile Include="11ROI01.cpp" />
     <ClCompile Include="12snake.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #define num 3
 
-int ROITest()
+int main()
 {
 	const char* winName[num] = { "original","ROI","cvSubS" };
 	IplImage* img[num];

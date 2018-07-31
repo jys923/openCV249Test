@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-int sobel(String filePath)
+int sobel(String filePath);
 {
   cv::Mat src, src_gray;
   cv::Mat grad;

@@ -5,15 +5,13 @@
 
 
 /* @ function main */
-int cvCaptureFromCAMTest()
+int main(int argc, char** argv)
 {
 	IplImage* image = 0;
 
 	// find a webcam
-	//CvCapture* capture = cvCaptureFromCAM(0);
-	CvCapture* capture = cvCaptureFromCAM(CV_CAP_DSHOW);
-	//capture->VI.listDevices();
-	//videoInput 라이브러리 윈도우용임
+	CvCapture* capture = cvCaptureFromCAM(0);
+
 	// create window
 	cvNamedWindow("WebCam Frame Capture", 0);
 
@@ -21,20 +19,23 @@ int cvCaptureFromCAMTest()
 	cvResizeWindow("WebCam Frame Capture", 640, 480);
 
 	while (true) {
-		cvGrabFrame(capture);
-
-		// capture a frame from webcam
-		image = cvRetrieveFrame(capture);
-
+		//cvGrabFrame(capture);
+		image = cvQueryFrame(capture);
+		//cvQueryFrame으로 얻어온 이미지는 자동 해제됨
+		//cvReleaseImage(&pFrame); // 사용할 경우 에러
+		
+		cvFlip(image, image, 1);
 		// draw the captured frame onto the window created
 		cvShowImage("WebCam Frame Capture", image);
 
-		if (cvWaitKey(10) >= 0)
-			break;
+		if (cvWaitKey(10) >= 0) {
+			//break;
+			return -1;
+		}
 	}
 
 	// release capture
-	cvReleaseCapture(&capture);
+	//cvReleaseCapture(&capture);
 
 	// destory window created
 	cvDestroyWindow("WebCam Frame Capture");

@@ -2,11 +2,11 @@
 
 #define SCALE 1.0
 
-int histogram03(String filePath)
+int main(int argc, char** argv)
 {
 	Mat inputImg;
 
-	inputImg = imread(filePath, CV_LOAD_IMAGE_COLOR);
+	inputImg = imread("../images/lena.png", CV_LOAD_IMAGE_COLOR);
 	resize(inputImg, inputImg, Size(), SCALE, SCALE, CV_INTER_AREA);
 
 	MatND histogramB, histogramG, histogramR;

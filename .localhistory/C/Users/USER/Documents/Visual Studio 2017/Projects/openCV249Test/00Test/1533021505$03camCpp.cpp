@@ -4,7 +4,7 @@
 #include "stdafx.h"
 
 
-int cppVideoCaptureTest()
+int main()
 {
 	VideoCapture cap(0);
 

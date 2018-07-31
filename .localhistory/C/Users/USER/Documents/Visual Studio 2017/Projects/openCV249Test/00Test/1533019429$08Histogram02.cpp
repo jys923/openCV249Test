@@ -19,8 +19,7 @@ public:
 	cv::MatND getHistogram(const cv::Mat &image) {
 		// 1차원(1D) 히스토그램 계산.
 		cv::MatND hist;
-		cv::calcHist(
-			&image, // 히스토그램 계산 
+		cv::calcHist(&image, // 히스토그램 계산 
 			1,   // 단일 영상의 히스토그램만
 			channels, // 대상 채널               
 			cv::Mat(), // 마스크 사용하지 않음     

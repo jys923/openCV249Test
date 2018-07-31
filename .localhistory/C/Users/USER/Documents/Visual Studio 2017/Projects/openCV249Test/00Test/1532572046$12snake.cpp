@@ -1,4 +1,6 @@
-﻿#include "stdafx.h"
+﻿#include <math.h>
+#include <stdio.h>
+#include "stdafx.h"
 
 typedef struct parameter Parameter;
 struct parameter {
@@ -7,14 +9,14 @@ struct parameter {
 	float gamma;
 };
 
-int cvSnakeImageTest()//(String filePath)
+int main()
 {
 	int i, j = 0, c;
 	IplImage *src_img, *dst_img;
 	CvPoint *contour;
 	CvPoint center;
 	int length = 60;              /* 動的輪郭を構成する点数 */
-	Parameter snake_param = { 0.45, 0.55, 0.8 };  /* cvSnakeImage のパラメータ */
+	Parameter snake_param = { 0.45, 0.55, 0.4 };  /* cvSnakeImage のパラメータ */
 	CvFont font;
 	char iter[8];
 
@@ -39,12 +41,12 @@ int cvSnakeImageTest()//(String filePath)
 	}
 	cvLine(dst_img, contour[length - 1], contour[0], CV_RGB(255, 0, 0), 2, 8, 0);
 	cvNamedWindow("Snakes", CV_WINDOW_AUTOSIZE);
-	cvCircle(dst_img, cvPoint(150, 300), 50, CV_RGB(0, 255, 0));// , 5, 8, 0);
 	cvShowImage("Snakes", dst_img);
 	cvWaitKey(0);
 
 	/* 動的輪郭の収束計算（過程を表示する） */
 	while (1) {
+
 		// (4)動的輪郭の輪郭計算
 		//cvSnakeImage(src_img, contour, length, &snake_param.alpha, &snake_param.beta, &snake_param.gamma,CV_VALUE, cvSize(15, 15), cvTermCriteria(CV_TERMCRIT_ITER, 1, 0.0), 1);
 		cvSnakeImage(

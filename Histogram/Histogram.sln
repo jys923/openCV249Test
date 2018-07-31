@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Histogram", "Histogram\Histogram.vcxproj", "{4BFF2D57-EE67-4F80-B62B-18CB71FFA4AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BFF2D57-EE67-4F80-B62B-18CB71FFA4AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BFF2D57-EE67-4F80-B62B-18CB71FFA4AC}.Debug|Win32.Build.0 = Debug|Win32
+		{4BFF2D57-EE67-4F80-B62B-18CB71FFA4AC}.Release|Win32.ActiveCfg = Release|Win32
+		{4BFF2D57-EE67-4F80-B62B-18CB71FFA4AC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F046348-048C-498F-A966-D18C531C9477}
+	EndGlobalSection
+EndGlobal

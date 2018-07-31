@@ -2,11 +2,11 @@
 
 #define SCALE 1.0
 
-int histogram03(String filePath)
+int main(int argc, char** argv)
 {
 	Mat inputImg;
 
-	inputImg = imread(filePath, CV_LOAD_IMAGE_COLOR);
+	inputImg = imread("../images/lena.png", CV_LOAD_IMAGE_COLOR);
 	resize(inputImg, inputImg, Size(), SCALE, SCALE, CV_INTER_AREA);
 
 	MatND histogramB, histogramG, histogramR;
@@ -55,6 +55,7 @@ int histogram03(String filePath)
 
 	for (int i = 1; i < number_bins; i++)
 	{
+
 		line(histImage, Point(bin_w*(i - 1), hist_h - cvRound(histogramB.at<float>(i - 1))),
 			Point(bin_w*(i), hist_h - cvRound(histogramB.at<float>(i))),
 			Scalar(255, 0, 0), 2, 8, 0);
@@ -65,6 +66,7 @@ int histogram03(String filePath)
 		line(histImage, Point(bin_w*(i - 1), hist_h - cvRound(histogramR.at<float>(i - 1))),
 			Point(bin_w*(i), hist_h - cvRound(histogramR.at<float>(i))),
 			Scalar(0, 0, 255), 2, 8, 0);
+
 	}
 
 	namedWindow("Original", CV_WINDOW_AUTOSIZE);
