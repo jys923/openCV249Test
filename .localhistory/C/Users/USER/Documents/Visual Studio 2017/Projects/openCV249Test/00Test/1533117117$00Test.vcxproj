@@ -173,7 +173,6 @@
     <ClCompile Include="09Histogram03.cpp" />
     <ClCompile Include="11ROI01.cpp" />
     <ClCompile Include="12snake.cpp" />
-    <ClCompile Include="13polar.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

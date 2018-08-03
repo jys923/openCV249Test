@@ -7,7 +7,7 @@ struct parameter {
 	float gamma;
 };
 
-int cvSnakeImageTest(String filePath)
+int cvSnakeImageTest()//(String filePath)
 {
 	int i, j = 0, c;
 	IplImage *src_img, *dst_img;
@@ -19,7 +19,7 @@ int cvSnakeImageTest(String filePath)
 	char iter[8];
 
 	// (1)画像を読み込む
-	src_img = cvLoadImage(filePath.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
+	src_img = cvLoadImage("../images/linux.png", CV_LOAD_IMAGE_GRAYSCALE);
 	dst_img = cvCreateImage(cvGetSize(src_img), IPL_DEPTH_8U, 3);
 
 	cvInitFont(&font, CV_FONT_HERSHEY_DUPLEX, 0.7, 0.7);

@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-int cvSnakeImageTest(String filePath);
+int cvSnakeImageTest(string filePath);
 int histogram03(String filePath);
 int cornerHarrisTest(String filePath);
 int sobel(String filePath);
